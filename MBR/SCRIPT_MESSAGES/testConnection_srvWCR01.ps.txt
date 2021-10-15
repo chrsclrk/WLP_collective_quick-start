@@ -1,0 +1,22 @@
+[virtuser@vmrhmbr MBR]$ PS1/testConnection_srvWCR01.ps1
+
+*** 2021-10-10T02:21:17+00:00 --  Tests conectivity from vmrhmbr.prj61801 at vmrhcll.prj61801.  ***
+
+>>>
+ssh -i /home/virtuser/.ssh/prj61801  virtuser@vmrhcll.prj61801 'date --iso-8601=seconds'
+<<<
+2021-10-10T02:21:17+00:00
+>>>
+/opt/PRJ61801/WLPCR/bin/collective testConnection vmrhmbr.prj61801,/opt/PRJ61801/WLPCR/usr,srvWCR01 --controller=Alice:apple@vmrhcll.prj61801:9443 --autoAcceptCertificates
+<<<
+
+Auto-accepting the certificate chain for target server.
+Certificate subject DN: CN=vmrhcll, OU=srvCLL01, O=ibm, C=us
+
+Successfully connected to host for: vmrhmbr.prj61801,/opt/PRJ61801/WLPCR/usr,srvWCR01.
+File transfer and remote server operations should be successful.
+
+Successfully connected to server: vmrhmbr.prj61801,/opt/PRJ61801/WLPCR/usr,srvWCR01 over SSL.
+Remote JMX operations should be successful.
+
+[virtuser@vmrhmbr MBR]$

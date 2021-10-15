@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>jsp-2.3</feature>
+    </featureManager>
+
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="-1"
+                  httpsPort="9443" />
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+    <include location="${server.config.dir}/clltv_mbr.xml" />
+    <include location="/home/virtuser/PRJ61801/wlp_key.xml" />
+
+    <remoteFileAccess>
+        <readDir>${server.config.dir}</readDir>
+        <readDir>/home/virtuser/PRJ61801</readDir>
+    </remoteFileAccess>
+
+</server>

@@ -1,0 +1,45 @@
+[packages-microsoft-com-prod]
+name=packages-microsoft-com-prod
+baseurl=https://packages.microsoft.com/rhel/7/prod/
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+Updating Subscription Management repositories.
+packages-microsoft-com-prod                     5.4 MB/s | 6.2 MB     00:01    
+Last metadata expiration check: 0:00:02 ago on Thu 07 Oct 2021 05:22:35 PM GMT.
+Dependencies resolved.
+================================================================================
+ Package       Arch      Version           Repository                      Size
+================================================================================
+Installing:
+ powershell    x86_64    7.1.4-1.rhel.7    packages-microsoft-com-prod     65 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 65 M
+Installed size: 170 M
+Downloading Packages:
+powershell-7.1.4-1.rhel.7.x86_64.rpm             15 MB/s |  65 MB     00:04    
+--------------------------------------------------------------------------------
+Total                                            15 MB/s |  65 MB     00:04     
+packages-microsoft-com-prod                     4.1 kB/s | 983  B     00:00    
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : powershell-7.1.4-1.rhel.7.x86_64                       1/1 
+  Running scriptlet: powershell-7.1.4-1.rhel.7.x86_64                       1/1 
+  Verifying        : powershell-7.1.4-1.rhel.7.x86_64                       1/1 
+Installed products updated.
+
+Installed:
+  powershell-7.1.4-1.rhel.7.x86_64                                              
+
+Complete!
+/usr/bin/pwsh
+PowerShell 7.1.4

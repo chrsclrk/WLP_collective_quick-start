@@ -1,0 +1,129 @@
+[virtuser@vmrhmbr MBR]$ PS1/all-in-one_srvWCR01.ps1
+
+*** 2021-10-10T02:09:46+00:00 --  Create srvWCR01 to join a WLP Collective as a member.  ***
+
+>>>
+/opt/PRJ61801/WLPCR/bin/server create srvWCR01
+<<<
+
+Server srvWCR01 created.
+
+    Directory: /opt/PRJ61801/WLPCR/usr/servers/srvWCR01
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-----          10/10/2021  2:09 AM             37 bootstrap.properties
+cp -p /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/server.xml /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/server.xml.000
+cp -p /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/server.xml /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/server.xml.001
+
+*** 2021-10-10T02:09:46+00:00 --  Join WLP server  at vmrhmbr.prj61801 to the collective controller at host vmrhcll.prj61801.  ***
+
+>>>
+/opt/PRJ61801/WLPCR/bin/collective join srvWCR01 --controller=Alice:apple@vmrhcll.prj61801:9443 --keystorePassword=kspw --autoAcceptCertificates --createConfigFile=/opt/PRJ61801/WLPCR/usr/servers/srvWCR01/clltv_mbr.xml
+<<<
+
+Auto-accepting the certificate chain for target server.
+Certificate subject DN: CN=vmrhcll, OU=srvCLL01, O=ibm, C=us
+
+Single Collective SSH Key has been selected by default for collective host vmrhcll.prj61801.
+Joining the collective with target controller vmrhcll.prj61801:9443...
+This may take a while.
+Successfully completed MBean request to the controller.
+Updating authorized keys with new public key...
+
+Successfully joined the collective for server srvWCR01.
+
+Add the following lines to the server.xml to enable:
+
+    <include location="${server.config.dir}/clltv_mbr.xml" />
+
+
+*** 2021-10-10T02:09:46+00:00 --  Updates WLP server  at vmrhmbr.prj61801 to the collective controller at host vmrhcll.prj61801.  ***
+
+>>>
+/opt/PRJ61801/WLPCR/bin/collective updateHost --controller=Alice:apple@vmrhcll.prj61801:9443 --autoAcceptCertificates --hostReadPath=/opt/PRJ61801/WLPCR/usr --hostWritePath=/opt/PRJ61801/WLPCR/usr
+<<<
+Updating the authentication information for the host...
+
+Auto-accepting the certificate chain for target server.
+Certificate subject DN: CN=vmrhcll, OU=srvCLL01, O=ibm, C=us
+
+Host vmrhmbr.prj61801 authentication information successfully updated.
+Updating authorized keys with new public key...
+
+*** 2021-10-10T02:09:46+00:00 --  Pull a customized server.xml for srvWCR01.  ***
+
+>>>
+cp -p /home/virtuser/PRJ61801/MBR/server.xml.mbr.001 /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/.
+<<<
+>>>
+cp -p /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/server.xml.mbr.001 /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/server.xml
+<<<
+
+*** 2021-10-10T02:09:59+00:00 --  Start srvWCR01 on vmrhmbr.prj61801 for WLP collective controller cntrllr01.  ***
+
+>>>
+/opt/PRJ61801/WLPCR/bin/server start srvWCR01
+<<<
+
+Starting server srvWCR01.
+Server srvWCR01 started with process ID 51655.
+
+*** 2021-10-10T02:10:07+00:00 --  Review /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/logs/messages.log ***
+
+********************************************************************************
+product = WebSphere Application Server 21.0.0.10 (wlp-1.0.57.cl211020210920-1900)
+wlp.install.dir = /opt/PRJ61801/WLPCR/
+java.home = /opt/PRJ61801/WLPCR/java/8.0/jre
+java.version = 1.8.0_301
+java.runtime = Java(TM) SE Runtime Environment (8.0.6.36 - pxa6480sr6fp36-20210824_02(SR6 FP36))
+os = Linux (4.18.0-305.19.1.el8_4.x86_64; amd64) (en_US)
+process = 51655@172.16.171.7
+********************************************************************************
+[2021-10-10T02:09:59.983+0000] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server srvWCR01 has been launched.
+[2021-10-10T02:10:00.473+0000] 0000001e com.ibm.ws.config.xml.internal.XMLConfigParser               A CWWKG0028A: Processing included configuration resource: /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/clltv_mbr.xml
+[2021-10-10T02:10:00.479+0000] 0000001e com.ibm.ws.config.xml.internal.XMLConfigParser               E CWWKG0090E: The /home/virtuser/PRJ61801/wlp_key.xml configuration resource does not exist or cannot be read.
+[2021-10-10T02:10:00.582+0000] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 0.701 seconds
+[2021-10-10T02:10:00.652+0000] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[2021-10-10T02:10:01.207+0000] 0000001d com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[2021-10-10T02:10:01.316+0000] 0000001f com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[2021-10-10T02:10:01.404+0000] 00000021 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[2021-10-10T02:10:01.405+0000] 00000021 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[2021-10-10T02:10:01.406+0000] 00000021 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[2021-10-10T02:10:01.500+0000] 0000002f com.ibm.ws.security.token.ltpa.LTPAKeyInfoManager            I CWWKS4103I: Creating the LTPA keys. This may take a few seconds.
+[2021-10-10T02:10:01.514+0000] 0000001d ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name MemberCollectiveAuthenticationPlugin has been activated.
+[2021-10-10T02:10:01.788+0000] 0000002f com.ibm.ws.security.token.ltpa.LTPAKeyInfoManager            A CWWKS4104A: LTPA keys created in 0.288 seconds. LTPA key file: /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/resources/security/ltpa.keys
+[2021-10-10T02:10:01.790+0000] 0000002f com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 0.290 seconds.
+[2021-10-10T02:10:01.992+0000] 00000034 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: IBMJMXConnectorREST.
+[2021-10-10T02:10:01.992+0000] 0000002d com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ibm/api.
+[2021-10-10T02:10:01.993+0000] 00000034 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module IBMJMXConnectorREST has been bound to default_host.
+[2021-10-10T02:10:01.993+0000] 0000002d com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ibm/api has been bound to default_host.
+[2021-10-10T02:10:02.003+0000] 0000002d com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[2021-10-10T02:10:02.015+0000] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [collectiveMember-1.0, distributedMap-1.0, el-3.0, jndi-1.0, json-1.0, jsp-2.3, restConnector-2.0, servlet-3.1, ssl-1.0].
+[2021-10-10T02:10:02.015+0000] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 1.435 seconds.
+[2021-10-10T02:10:02.015+0000] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The srvWCR01 server is ready to run a smarter planet. The srvWCR01 server started in 2.136 seconds.
+[2021-10-10T02:10:02.087+0000] 00000030 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api
+[2021-10-10T02:10:02.089+0000] 00000031 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/IBMJMXConnectorREST
+[2021-10-10T02:10:02.091+0000] 0000002d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/logs/state/plugin-cfg.xml.
+[2021-10-10T02:10:02.092+0000] 00000030 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-10T02:10:02.095+0000] 00000031 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-10T02:10:02.103+0000] 00000030 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[2021-10-10T02:10:02.134+0000] 00000031 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.jmx.connector.server.rest] [/IBMJMXConnectorREST] [JMXRESTProxyServlet]: Initialization successful.
+[2021-10-10T02:10:02.501+0000] 00000025 com.ibm.ws.ssl.config.WSKeyStore                             I Successfully loaded default keystore: /opt/PRJ61801/WLPCR/usr/servers/srvWCR01/resources/security/key.p12 of type: PKCS12
+[2021-10-10T02:10:02.782+0000] 00000025 ective.repository.client.internal.RemoteRepositoryConnection I CWWKX8060I: The collective member heart beat interval is 60 seconds.
+[2021-10-10T02:10:02.856+0000] 00000034 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host vmrhmbr.prj61801  (IPv4: 172.16.171.7) port 9443.
+[2021-10-10T02:10:02.860+0000] 00000034 com.ibm.ws.jmx.connector.server.rest.RESTAppListener         I CWWKX0103I: The JMX REST connector is running and is available at the following service URL: service:jmx:rest://vmrhmbr.prj61801:9443/IBMJMXConnectorREST
+[2021-10-10T02:10:02.861+0000] 00000034 com.ibm.ws.jmx.connector.server.rest.RESTAppListener         I CWWKX0103I: The JMX REST connector is running and is available at the following service URL: service:jmx:rest://vmrhmbr.prj61801:9443/IBMJMXConnectorREST
+[2021-10-10T02:10:02.861+0000] 00000034 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhmbr.prj61801:9443/IBMJMXConnectorREST/
+[2021-10-10T02:10:02.862+0000] 00000034 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhmbr.prj61801:9443/ibm/api/
+[2021-10-10T02:10:03.837+0000] 0000002f jmx.connector.client.rest.internal.RESTMBeanServerConnection I Value of retry post was already set: false
+[2021-10-10T02:10:04.048+0000] 0000002f jmx.connector.client.rest.internal.RESTMBeanServerConnection I CWWKX0230I: The collective member opened JMX client to the collective controller: vmrhcll.prj61801:9443
+[2021-10-10T02:10:04.049+0000] 0000002f ective.repository.client.internal.RemoteConnectionHelperImpl I CWWKX8055I: The collective member has established a connection to the collective controller.
+[2021-10-10T02:10:04.122+0000] 0000002c m.ws.collective.member.internal.publisher.HostAuthConfigImpl I CWWKX8122I: The default SSH key-based configuration is being used for the host authentication configuration.
+[2021-10-10T02:10:04.131+0000] 0000003c collective.member.internal.publisher.RepositoryPublisherImpl I CWWKX8116I: The server STARTED state was successfully published to the collective repository.
+[2021-10-10T02:10:04.133+0000] 00000034 ective.singleton.internal.SingletonServiceMessengerMBeanImpl I CWWKX1000I: The SingletonMessenger MBean is available.
+[2021-10-10T02:10:04.185+0000] 0000002c com.ibm.ws.collective.member.ServerManagementPublisher       I CWWKX8154I: The remote host authentication for this server has been configured with the collective-wide SSH key.
+[2021-10-10T02:10:04.275+0000] 00000030 ws.collective.member.internal.publisher.ServerPathsPublisher I CWWKX8114I: The server's paths were successfully published to the collective repository.
+[2021-10-10T02:10:04.336+0000] 0000002d com.ibm.ws.filetransfer.internal.mbean.FileService           I CWWKX7912I: The FileServiceMXBean attribute WriteList was successfully updated.
+[2021-10-10T02:10:04.349+0000] 00000034 com.ibm.ws.filetransfer.internal.mbean.FileService           I CWWKX7912I: The FileServiceMXBean attribute ReadList was successfully updated.
+[2021-10-10T02:10:04.597+0000] 00000031 com.ibm.ws.collective.member.ServerManagementPublisher       I CWWKX8112I: The server's host information was successfully published to the collective repository.

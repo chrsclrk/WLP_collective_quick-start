@@ -1,0 +1,34 @@
+[virtuser@vmrhmbr MBR]$ PS1/remove_srvWCR01.ps1
+
+*** 2021-10-10T01:38:06+00:00 --  Remove WLP server srvWCR01 at vmrhmbr.prj61801 from the collective controller at host vmrhcll.prj61801.  ***
+
+>>>
+/opt/PRJ61801/WLPCR/bin/collective remove srvWCR01 --controller=Alice:apple@vmrhcll.prj61801:9443 --autoAcceptCertificates
+<<<
+Attempting to unregister the server from the collective...
+Host: vmrhmbr.prj61801
+User Dir: /opt/PRJ61801/WLPCR/usr/
+Server Name: srvWCR01
+
+Auto-accepting the certificate chain for target server.
+Certificate subject DN: CN=vmrhcll, OU=srvCLL01, O=ibm, C=us
+
+Server srvWCR01 successfully unregistered.
+
+Attempting to remove resources for the collective from the server...
+The resources for collective membership were successfully removed.
+Removing all administrative metadata from the collective repository...
+This may take a while.
+Successfully completed AdminMetadataManagerMBean request to the controller.
+
+Please update the server.xml and remove any of the following elements:
+
+    <featureManager>
+        <feature>collectiveController-1.0</feature>
+        <feature>collectiveMember-1.0</feature>
+    </featureManager>
+    <collectiveMember ... />
+    <hostAuthInfo ... />
+
+
+[virtuser@vmrhmbr MBR]$

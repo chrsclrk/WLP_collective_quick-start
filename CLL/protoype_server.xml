@@ -1,0 +1,77 @@
+<server description="Collective Controller. 2021-09-17-T112354 UTC">
+
+	<!-- Enable features -->
+	<featureManager>
+	<feature>adminCenter-1.0</feature>
+	<feature>websocket-1.1</feature>
+	<feature>collectiveController-1.0</feature>
+	</featureManager>
+     
+	<!-- Define the host name for use by the collective.
+	     If the host name needs to be changed, the server should be
+	     removed from the collective and re-joined. 
+	<variable name="defaultHostName" value="localhost" />  -->
+     
+	 <!-- Define an Administrator and non-Administrator -->
+	<basicRegistry id="basic">
+	<user name="Alice" password="{aes}AJdsYJ8VoZ3T1IHwKWce0Rp4hZkkiZRSSpttS9xAv7Ja" />
+	<user name="Bobby" password="banana" />
+	<user name="Cheng" password="cherry" />
+	</basicRegistry>
+     
+	<!-- Assign 'admin' to Administrator -->
+	<administrator-role>
+	  <user>Alice</user>
+     </administrator-role>
+     
+	<!-- <keyStore id="defaultKeyStore" password="Liberty" />  22Sep21W CLL conflict? -->  
+     
+	<httpEndpoint id="defaultHttpEndpoint"
+		      host="*"
+		      httpPort="-1"
+		      httpsPort="9443" />
+
+
+     <!-- Define the host name for use by the collective.
+         If the host name needs to be changed, the server should be
+         removed from the collective and re-joined or re-replicated. -->
+    <variable name="defaultHostName" value="vmrhcll.prj61801" />
+
+
+    <!-- TODO: Set the security configuration for Administrative access
+    <quickStartSecurity userName="" userPassword="" />
+    -->
+
+    <!-- clientAuthenticationSupported set to enable bidirectional trust -->
+    <ssl id="defaultSSLConfig"
+         keyStoreRef="defaultKeyStore"
+         trustStoreRef="defaultTrustStore"
+         clientAuthenticationSupported="true" />
+
+    <!-- inbound (HTTPS) keystore -->
+    <keyStore id="defaultKeyStore" password="{xor}NCwvKA=="
+              location="${server.config.dir}/resources/security/key.p12" />
+
+    <!-- inbound (HTTPS) truststore -->
+    <keyStore id="defaultTrustStore" password="{xor}NCwvKA=="
+              location="${server.config.dir}/resources/security/trust.p12" />
+
+    <!-- server identity keystore -->
+    <keyStore id="serverIdentity" password="{xor}NCwvKA=="
+              location="${server.config.dir}/resources/collective/serverIdentity.p12" />
+
+    <!-- collective trust keystore -->
+    <keyStore id="collectiveTrust" password="{xor}NCwvKA=="
+              location="${server.config.dir}/resources/collective/collectiveTrust.p12" />
+
+    <!-- collective root signers keystore -->
+    <keyStore id="collectiveRootKeys" password="{xor}NCwvKA=="
+              location="${server.config.dir}/resources/collective/rootKeys.p12" />
+   
+     <remoteFileAccess>
+          <readDir>${server.config.dir}</readDir>
+          <readDir>/home/virtuser/PRJ61801</readDir>
+     </remoteFileAccess>
+
+    <include location="/home/virtuser/PRJ61801/wlp_key.xml" />
+    </server>

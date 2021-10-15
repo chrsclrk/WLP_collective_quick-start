@@ -1,0 +1,68 @@
+[virtuser@vmrhcll CLL]$ SH/serve_iim_packages.sh
+
+*** 2021-10-09T11:50:58+00:00 Serves IIM packages with Python3..  ***
+success
+9443/tcp 8000/tcp
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+172.16.171.7 - - [09/Oct/2021 11:52:14] "GET /repository.config HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:04] "GET /repository.config HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:12] "GET /repository.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:13] "GET /Offerings/com.ibm.websphere.liberty.CORE_16.0.2.20160526_2338.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:13] "GET /Offerings/com.ibm.websphere.liberty.CORE_16.0.2.20160526_2338_SE.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:13] "GET /files/com.ibm.ws.liberty.embedded.core.jsons_16.0.2.20160526_2338.file HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /repository.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /atoc/atoc.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /atoc/nq/native_file.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /atoc/nq/native_zip.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /native/wlp-kernel_16.0.2.20160526_2338.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /files/com.ibm.ws.liberty.embedded.core.jsons_16.0.2.20160526_2338.file HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /native/com.ibm.websphere.liberty.core.legal.payload_16.0.2.20160526_2338.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:22] "GET /files/com.ibm.ws.liberty.embedded.core.assets_16.0.2.20160526_2338.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:24] "GET /files/com.ibm.was.liberty.asset.selection.invoke_16.0.2.20160526_2338.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:24] "GET /files/com.ibm.was.liberty.dynamic.feature.install_16.0.2.20160526_2338.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:24] "GET /files/com.ibm.was.liberty.install.archive.runtimes_16.0.2.20160526_2338.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:24] "GET /files/com.ibm.was.permission.utils_8.5.0.20120309_1010.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:24] "GET /native/com.ibm.websphere.install.utils_1.0.0.44026b0ceed7ece295f38c296ed88a46.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:25] "GET /Offerings/com.ibm.websphere.liberty.CORE_16.0.2.20160526_2338.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:25] "GET /Offerings/com.ibm.websphere.liberty.CORE_16.0.2.20160526_2338_SE.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /repository.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /Offerings/com.ibm.websphere.liberty.CORE_21.0.10.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /repository.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /atoc/atoc.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /atoc/nq/eclipse_plugin.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.was.liberty.jdk7.eos.panel_19.0.9.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.was.liberty.asset.selection_20.0.3.20201003_2129.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.im.dependency.was.apar_1.0.15.v20170317_1458.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.was.liberty.core.license_21.0.10.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.ws.osprereq.check_16.0.2.20200819_2140.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.was.liberty.jdk6.eos.panel_17.0.3.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.was.liberty.core.moreinfo_9.0.0.20180615_0000.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.was.liberty.embeddablecontainer.removal.panel_18.0.2.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:38] "GET /plugins/com.ibm.was.determine.job.type_9.0.0.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:39] "GET /Offerings/com.ibm.websphere.liberty.CORE_21.0.10.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:39] "GET /Offerings/com.ibm.websphere.liberty.CORE_21.0.10.20210920_1901_SE.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:53:39] "GET /files/com.ibm.ws.liberty.embedded.core.jsons_21.0.10.20210920_1901.file HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:15] "GET /repository.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:15] "GET /atoc/atoc.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:15] "GET /atoc/nq/native_file.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:15] "GET /atoc/nq/native_zip.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:15] "GET /native/wlp-kernel_21.0.10.20210920_1901.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:15] "GET /files/com.ibm.ws.liberty.embedded.core.assets_21.0.10.20210920_1901.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:20] "GET /files/com.ibm.ws.liberty.embedded.core.jsons_21.0.10.20210920_1901.file HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:20] "GET /native/com.ibm.websphere.liberty.core.legal.payload_21.0.10.20210920_1901.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:20] "GET /files/com.ibm.was.liberty.asset.selection.invoke_20.0.3.20201003_2129.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:20] "GET /files/com.ibm.was.liberty.dynamic.feature.install_16.0.4.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:20] "GET /files/com.ibm.was.liberty.install.archive.runtimes_16.0.2.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:20] "GET /files/com.ibm.was.liberty.generate.java.env_16.0.2.20160420_1650.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:20] "GET /native/com.ibm.websphere.install.utils_1.0.0.7356f5a2494c6c7f14a680e3ce4490e9.zip HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:23] "GET /Offerings/com.ibm.websphere.liberty.CORE_21.0.10.20210920_1901.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:54:23] "GET /Offerings/com.ibm.websphere.liberty.CORE_21.0.10.20210920_1901_SE.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:09] "GET /repository.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:09] "GET /Offerings/com.ibm.java.jdk.v8_8.0.6036.20210920_0725.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:09] "GET /Offerings/com.ibm.java.jdk.v8_8.0.6036.20210920_0725_SE.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:10] "GET /repository.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:10] "GET /atoc/atoc.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:10] "GET /atoc/nq/native_file.xml HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:10] "GET /files/com.ibm.JDK8.64bit.jdk.linux.x8664_8.0.6036.20210824_0728.tar.gz HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:15] "GET /Offerings/com.ibm.java.jdk.v8_8.0.6036.20210920_0725.jar HTTP/1.1" 200 -
+172.16.171.7 - - [09/Oct/2021 11:55:15] "GET /Offerings/com.ibm.java.jdk.v8_8.0.6036.20210920_0725_SE.jar HTTP/1.1" 200 -

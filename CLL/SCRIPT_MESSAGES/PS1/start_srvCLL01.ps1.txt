@@ -1,0 +1,111 @@
+[virtuser@vmrhcll CLL]$ PS1/start_srvCLL01.ps1
+
+*** 2021-10-08T16:50:38+00:00 --  Runs WLP "server start srvCLL01" on vmrhcll.prj61801 to provide a collective controller.  ***
+
+>>>
+/opt/PRJ61801/WLPND/bin/server start srvCLL01
+<<<
+
+Starting server srvCLL01.
+Server srvCLL01 started with process ID 37774.  
+*** 2021-10-08T16:50:45+00:00 --  Review /opt/PRJ61801/WLPND/usr/servers/srvCLL01/logs/messages.log  ***
+
+[virtuser@vmrhcll CLL]$ cat /opt/PRJ61801/WLPND/usr/servers/srvCLL01/logs/messages.log                                                                     ********************************************************************************                                                                           product = WebSphere Application Server 21.0.0.10 (wlp-1.0.57.cl211020210920-1900)                                                                          wlp.install.dir = /opt/PRJ61801/WLPND/
+java.home = /opt/PRJ61801/WLPND/java/8.0/jre
+java.version = 1.8.0_301
+java.runtime = Java(TM) SE Runtime Environment (8.0.6.36 - pxa6480sr6fp36-20210824_02(SR6 FP36))
+os = Linux (4.18.0-305.19.1.el8_4.x86_64; amd64) (en_US)
+process = 37774@172.16.171.6
+********************************************************************************
+[2021-10-08T16:50:38.996+0000] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server srvCLL01 has been launched.
+[2021-10-08T16:50:39.209+0000] 0000001e com.ibm.ws.config.xml.internal.XMLConfigParser               A CWWKG0028A: Processing included configuration resource: /home/virtuser/PRJ61801/wlp_key.xml
+[2021-10-08T16:50:39.264+0000] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 0.319 seconds
+[2021-10-08T16:50:39.285+0000] 00000029 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[2021-10-08T16:50:39.724+0000] 0000001d com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[2021-10-08T16:50:39.822+0000] 00000021 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[2021-10-08T16:50:39.864+0000] 0000001e com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[2021-10-08T16:50:39.865+0000] 0000001e com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[2021-10-08T16:50:39.865+0000] 0000001e com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[2021-10-08T16:50:39.905+0000] 0000002e com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 0.004 seconds.
+[2021-10-08T16:50:39.908+0000] 0000001d com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0008I: The security service is ready.
+[2021-10-08T16:50:39.910+0000] 0000001d ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name MemberCollectiveAuthenticationPlugin has been activated.
+[2021-10-08T16:50:39.981+0000] 0000001d com.ibm.ws.ui.internal.v1.pojo.POJOLoaderService             I CWWKX1015I: FILE persistence layer initialized for the Admin Center.
+[2021-10-08T16:50:39.982+0000] 0000001d com.ibm.ws.ui.internal.v1.pojo.PlainTextLoaderService        I CWWKX1063I: FILE persistence layer initialized for the Admin Center tool data loader.
+[2021-10-08T16:50:40.207+0000] 00000032 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: The Liberty Deploy Tool.
+[2021-10-08T16:50:40.208+0000] 00000033 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: com.ibm.ws.collective.rest.notify.
+[2021-10-08T16:50:40.208+0000] 00000032 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module The Liberty Deploy Tool has been bound to default_host.
+[2021-10-08T16:50:40.208+0000] 00000033 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module com.ibm.ws.collective.rest.notify has been bound to default_host.
+[2021-10-08T16:50:40.211+0000] 0000002b com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: The Liberty Server Config Tool.
+[2021-10-08T16:50:40.211+0000] 0000002b com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module The Liberty Server Config Tool has been bound to default_host.
+[2021-10-08T16:50:40.219+0000] 00000034 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ibm/api.
+[2021-10-08T16:50:40.219+0000] 00000034 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ibm/api has been bound to default_host.
+[2021-10-08T16:50:40.229+0000] 00000031 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: IBMJMXConnectorREST.
+[2021-10-08T16:50:40.230+0000] 00000031 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module IBMJMXConnectorREST has been bound to default_host.
+[2021-10-08T16:50:40.232+0000] 0000002e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: The Liberty Admin Center.
+[2021-10-08T16:50:40.232+0000] 0000002e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module The Liberty Admin Center has been bound to default_host.
+[2021-10-08T16:50:40.239+0000] 0000002c com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: The Liberty Explore Tool.
+[2021-10-08T16:50:40.239+0000] 0000002c com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module The Liberty Explore Tool has been bound to default_host.
+[2021-10-08T16:50:40.244+0000] 00000029 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [adminCenter-1.0, collectiveController-1.0, collectiveMember-1.0, distributedMap-1.0, jaxrs-1.1, jndi-1.0, json-1.0, jsp-2.2, restConnector-1.0, servlet-3.1, ssl-1.0, websocket-1.1].
+[2021-10-08T16:50:40.244+0000] 00000029 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 0.980 seconds.
+[2021-10-08T16:50:40.245+0000] 00000029 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The srvCLL01 server is ready to run a smarter planet. The srvCLL01 server started in 1.300 seconds.
+[2021-10-08T16:50:40.258+0000] 00000029 com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[2021-10-08T16:50:40.261+0000] 00000029 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /opt/PRJ61801/WLPND/usr/servers/srvCLL01/logs/state/plugin-cfg.xml.
+[2021-10-08T16:50:40.281+0000] 00000031 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/IBMJMXConnectorREST
+[2021-10-08T16:50:40.281+0000] 0000002e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/adminCenter
+[2021-10-08T16:50:40.281+0000] 00000033 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api/collective/notify
+[2021-10-08T16:50:40.281+0000] 0000002b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/adminCenter/serverConfig-1.0
+[2021-10-08T16:50:40.282+0000] 00000032 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/adminCenter/deploy-1.0
+[2021-10-08T16:50:40.284+0000] 00000031 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-08T16:50:40.286+0000] 00000032 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-08T16:50:40.286+0000] 0000002c com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/adminCenter/explore-1.0
+[2021-10-08T16:50:40.286+0000] 0000002c com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-08T16:50:40.287+0000] 00000033 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-08T16:50:40.287+0000] 00000034 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api
+[2021-10-08T16:50:40.287+0000] 00000034 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-08T16:50:40.287+0000] 0000002e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-08T16:50:40.288+0000] 0000002b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[2021-10-08T16:50:40.296+0000] 00000034 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[2021-10-08T16:50:40.313+0000] 00000033 com.ibm.ws.wsoc.EndpointManager                              I CWWKH0046I: Adding a WebSocket ServerEndpoint with the following URI: /
+[2021-10-08T16:50:40.354+0000] 00000031 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.jmx.connector.server.rest] [/IBMJMXConnectorREST] [JMXRESTProxyServlet]: Initialization successful.
+[2021-10-08T16:50:40.720+0000] 00000025 com.ibm.ws.ssl.config.WSKeyStore                             I Successfully loaded default keystore: /opt/PRJ61801/WLPND/usr/servers/srvCLL01/resources/security/key.p12 of type: PKCS12
+[2021-10-08T16:50:41.082+0000] 00000025 appe.utils.common.customization.CustomizationManager:default I CWWKX6025I: The collective controller configuration parameter disableffdc is missing. The default value false is used.
+[2021-10-08T16:50:41.183+0000] 00000025 service.multiplexed.impl.ReplicationServiceMultiplexer:10010 I Sync state changed to true
+[2021-10-08T16:50:41.183+0000] 00000025 service.multiplexed.impl.ReplicationServiceMultiplexer:10010 I CWWKX6012I: The collective controller is temporarily unavailable, probably due to a change in the replica set. It should become available within a few seconds. Current active replica set is []. The configured replica set is [172.16.171.6:10010].
+[2021-10-08T16:50:41.184+0000] 00000025 com.ibm.ws.frappe.paxos.impl.CommandsExecutor:10010          I CWWKX6013I: The collective controller state is {S_ACCEPTOR}, last proposed command is -1, the last accepted command is 152, the last executed command is 0 and the log is 152.
+[2021-10-08T16:50:41.206+0000] 00000031 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host *  (IPv6) port 9443.
+[2021-10-08T16:50:41.210+0000] 00000031 com.ibm.ws.jmx.connector.server.rest.RESTAppListener         I CWWKX0103I: The JMX REST connector is running and is available at the following service URL: service:jmx:rest://vmrhcll.prj61801:9443/IBMJMXConnectorREST
+[2021-10-08T16:50:41.210+0000] 00000031 com.ibm.ws.jmx.connector.server.rest.RESTAppListener         I CWWKX0103I: The JMX REST connector is running and is available at the following service URL: service:jmx:rest://vmrhcll.prj61801:9443/IBMJMXConnectorREST
+[2021-10-08T16:50:41.211+0000] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhcll.prj61801:9443/ibm/adminCenter/serverConfig-1.0/
+[2021-10-08T16:50:41.212+0000] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhcll.prj61801:9443/adminCenter/
+[2021-10-08T16:50:41.212+0000] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhcll.prj61801:9443/ibm/adminCenter/deploy-1.0/
+[2021-10-08T16:50:41.212+0000] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhcll.prj61801:9443/ibm/api/
+[2021-10-08T16:50:41.212+0000] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhcll.prj61801:9443/IBMJMXConnectorREST/
+[2021-10-08T16:50:41.212+0000] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhcll.prj61801:9443/ibm/api/collective/notify/
+[2021-10-08T16:50:41.212+0000] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): https://vmrhcll.prj61801:9443/ibm/adminCenter/explore-1.0/
+[2021-10-08T16:50:41.234+0000] 00000036 .utils.service.multiplexed.impl.UniverseAndReplicaData:10010 I CWWKX6009I: The collective controller successfully connected to replica 172.16.171.6:10010. Current active replica set is [172.16.171.6:10010]. The configured replica set is [172.16.171.6:10010]. The connected standby replicas are [].
+[2021-10-08T16:50:43.242+0000] 00000036 service.multiplexed.impl.ReplicationServiceMultiplexer:10010 I Sync state changed to true
+[2021-10-08T16:50:44.246+0000] 00000036 service.multiplexed.impl.ReplicationServiceMultiplexer:10010 I CWWKX6014I: This collective controller replica finished synchronizing the data with the other replicas. The log is 153.
+[2021-10-08T16:50:44.246+0000] 00000036 service.multiplexed.impl.ReplicationServiceMultiplexer:10010 I CWWKX6011I: The collective controller is ready, and can accept requests. The leader is 172.16.171.6:10010. Current active replica set is [172.16.171.6:10010]. The configured replica set is [172.16.171.6:10010].
+[2021-10-08T16:50:44.249+0000] 0000002b m.ws.collective.repository.internal.CollectiveElectorFactory I CWWKX9079I: The CollectiveElectorFactory is available.
+[2021-10-08T16:50:44.258+0000] 0000002e ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name CollectiveAuthenticationPluginImpl has been activated.
+[2021-10-08T16:50:44.264+0000] 0000003c collective.repository.internal.CollectiveRepositoryMBeanImpl I CWWKX9000I: The CollectiveRepository MBean is available.
+[2021-10-08T16:50:44.271+0000] 0000003c collective.member.internal.publisher.RepositoryPublisherImpl I CWWKX8116I: The server STARTED state was successfully published to the collective repository.
+[2021-10-08T16:50:44.273+0000] 00000031 ective.singleton.internal.SingletonServiceMessengerMBeanImpl I CWWKX1000I: The SingletonMessenger MBean is available.
+[2021-10-08T16:50:44.276+0000] 0000002e com.ibm.ws.ui.internal.v1.pojo.POJOLoaderService             I CWWKX1015I: COLLECTIVE persistence layer initialized for the Admin Center.
+[2021-10-08T16:50:44.276+0000] 0000002e com.ibm.ws.ui.internal.v1.pojo.PlainTextLoaderService        I CWWKX1063I: COLLECTIVE persistence layer initialized for the Admin Center tool data loader.
+[2021-10-08T16:50:44.278+0000] 0000002e om.ibm.ws.collective.repository.internal.SharedConfigManager I CWWKX9065I: The ControllerConfig MBean is available.
+[2021-10-08T16:50:44.281+0000] 0000002e e.repository.internal.metadata.AdminMetadataManagerMBeanImpl I CWWKX9069I: The AdminMetadataManager MBean is available.
+[2021-10-08T16:50:44.283+0000] 0000002e ws.collective.singleton.internal.SingletonServiceManagerImpl I CWWKX1002I: Singleton service FailoverSingletonService for scope collective is created.
+[2021-10-08T16:50:44.287+0000] 0000002e om.ibm.ws.collective.singleton.internal.SingletonServiceImpl I CWWKX1019I: The local singleton candidate is elected leader: host=vmrhcll.prj61801; userdir=/opt/PRJ61801/WLPND/usr/; server=srvCLL01; port=9443; service=FailoverSingletonService; scope=collective
+[2021-10-08T16:50:44.292+0000] 00000034 ws.collective.member.internal.publisher.ServerPathsPublisher I CWWKX8114I: The server's paths were successfully published to the collective repository.
+[2021-10-08T16:50:44.294+0000] 0000002e lective.repository.internal.RepositoryConfigurationMBeanImpl I CWWKX9049I: The RepositoryConfiguration MBean is available.
+[2021-10-08T16:50:44.297+0000] 0000002e m.ibm.ws.collective.command.internal.ServerCommandsMBeanImpl I CWWKX7200I: The ServerCommands MBean is available.
+[2021-10-08T16:50:44.301+0000] 0000002e com.ibm.ws.collective.deploy.internal.DeployServiceImpl      I CWWKX7240I: The DeployService is available.
+[2021-10-08T16:50:44.301+0000] 00000032 com.ibm.ws.filetransfer.internal.mbean.FileService           I CWWKX7912I: The FileServiceMXBean attribute WriteList was successfully updated.
+[2021-10-08T16:50:44.303+0000] 0000002b com.ibm.ws.filetransfer.internal.mbean.FileService           I CWWKX7912I: The FileServiceMXBean attribute ReadList was successfully updated.
+[2021-10-08T16:50:44.309+0000] 0000002e bm.ws.collective.repository.internal.ClusterManagerMBeanImpl I CWWKX9030I: The ClusterManager MBean is available.
+[2021-10-08T16:50:44.327+0000] 0000002e llective.repository.internal.CollectiveRegistrationMBeanImpl I CWWKX9003I: CollectiveRegistration MBean is available.
+[2021-10-08T16:50:44.330+0000] 0000002b m.ws.collective.member.internal.publisher.HostAuthConfigImpl I CWWKX8122I: The default SSH key-based configuration is being used for the host authentication configuration.
+[2021-10-08T16:50:44.331+0000] 0000002b com.ibm.ws.collective.member.ServerManagementPublisher       I CWWKX8154I: The remote host authentication for this server has been configured with the collective-wide SSH key.
+[2021-10-08T16:50:44.360+0000] 0000002c com.ibm.ws.collective.member.ServerManagementPublisher       I CWWKX8112I: The server's host information was successfully published to the collective repository.
+[virtuser@vmrhcll CLL]$

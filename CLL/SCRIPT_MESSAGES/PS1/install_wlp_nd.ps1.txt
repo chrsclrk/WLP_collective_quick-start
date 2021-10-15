@@ -1,0 +1,22 @@
+[virtuser@vmrhcll CLL]$ PS1/install_wlp_nd.ps1
+
+*** 2021-10-08T09:47:49+00:00 --  Install WLP ND from IIM packages fetched from ibm.com.  ***
+
+
+---  com.ibm.websphere.liberty.ND_16.0.2.20160526_2338  ---
+
+/home/virtuser/IBM/InstallationManager/eclipse/tools/imcl install com.ibm.websphere.liberty.ND_16.0.2.20160526_2338 -repositories /opt/PRJ61801/SHBX/WLP_PKGS -installationDirectory /opt/PRJ61801/WLPND -acceptLicense
+
+---  com.ibm.websphere.liberty.ND_21.0.10.20210920_1901  ---
+
+/home/virtuser/IBM/InstallationManager/eclipse/tools/imcl install com.ibm.websphere.liberty.ND_21.0.10.20210920_1901 -repositories /opt/PRJ61801/SHBX/WLP_PKGS -installationDirectory /opt/PRJ61801/WLPND -acceptLicense
+
+---  com.ibm.java.jdk.v8_8.0.6036.20210920_0725  ---
+
+/home/virtuser/IBM/InstallationManager/eclipse/tools/imcl install com.ibm.java.jdk.v8_8.0.6036.20210920_0725 -repositories /opt/PRJ61801/SHBX/WLP_PKGS -installationDirectory /opt/PRJ61801/WLPND -acceptLicense
+Installed com.ibm.websphere.liberty.ND_16.0.2.20160526_2338 to the /opt/PRJ61801/WLPND directory.
+WARNING: A supported operating system was not detected. Support for your operating system might have been added after the release of the product. For more information about supported operating systems, see the WebSphere Application Server detailed system requirements at <a href="http://www.ibm.com/support/docview.wss?rs=180&uid=swg27006921">http://www.ibm.com/support/docview.wss?rs=180&&uid=swg27006921</a>. You can continue with the installation, but the installation or product operation might not succeed without applying maintenance. To obtain the latest maintenance packages to apply after installation, see the product support web pages at <a href="http://www.ibm.com/support/docview.wss?rs=180&uid=swg27004980">http://www.ibm.com/support/docview.wss?rs=180&&uid=swg27004980</a>.
+Updated to com.ibm.websphere.liberty.ND_21.0.10.20210920_1901 in the /opt/PRJ61801/WLPND directory.
+WARNING: Support for using Java SE 7 and Java SE 7.1 with WebSphere Liberty ended. The Liberty kernel can no longer run with Java SE 7 or Java SE 7.1.
+Installed com.ibm.java.jdk.v8_8.0.6036.20210920_0725 to the /opt/PRJ61801/WLPND directory.
+[virtuser@vmrhcll CLL]
